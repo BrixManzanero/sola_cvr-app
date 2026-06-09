@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════
+  SOLA CVR DASHBOARD — HOW TO RUN
+═══════════════════════════════════════════════════
+
+Project structure
+─────────────────
+  app.py                ← entry point (run this)
+  backend/
+    utils.py            ← shared helpers
+    shopee.py           ← Shopee logic
+    tiktok.py           ← TikTok logic
+    lazada.py           ← Lazada logic
+    processor.py        ← orchestration
+  frontend/
+    config.py           ← platform settings
+    styles.py           ← all CSS
+    components.py       ← Streamlit UI
+
+STEP 1 — Install (first time only)
+───────────────────────────────────
+  pip install streamlit pandas openpyxl xlrd
+
+STEP 2 — Run
+─────────────
+  cd sola_cvr_app
+  streamlit run app.py
+
+  Browser opens at: http://localhost:8501
+
+STEP 3 — Use
+─────────────
+  1. Pick the platform tab (Shopee / TikTok / Lazada)
+  2. Drop in your files — 1 or many
+  3. Click Process
+  4. Review the table
+  5. Download Excel
+
+Stop: Ctrl+C in the terminal
+═══════════════════════════════════════════════════
