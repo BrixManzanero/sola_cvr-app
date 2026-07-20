@@ -12,7 +12,7 @@ Sales/GMV/Revenue data is automatically excluded.
 2. Pick the platform tab: **Shopee**, **TikTok**, or **Lazada**.
 3. Drag in your export file(s) for that platform, or click **Browse files**.
 4. Click **Process**.
-5. Review the on-screen table (with a TOTAL row), then click **Download Excel**.
+5. Review the on-screen table (per-month CVR), then click **Download Excel**.
 
 ### Continuing from last month (so you don't re-upload everything)
 - Open the **📁 Files** section at the top of a tab.
@@ -31,6 +31,12 @@ All three platforms now use ONE unified, comparable formula: **CVR = Orders ÷ V
 | Shopee | Month, Visitors, Paid Orders, CVR | Paid Orders ÷ Visitors |
 | TikTok | Month, Page Views, Visitors, Product Clicks, Orders, CVR | Orders ÷ Visitors |
 | Lazada | Month, Pageviews, Visitors, Buyers, Orders, CVR | Orders ÷ Visitors |
+| Shopify | Month, Visitors, Orders, CVR | Orders ÷ Visitors |
+
+**Shopify is manual entry.** There's no clean Shopify export with unique Visitors +
+Orders together, so the Shopify tab lets you TYPE the two numbers per month
+(from Shopify Analytics → Online store **visitors** (not Sessions) + Orders).
+You can also load a previous Shopify output to keep your history and just add the new month.
 
 **Shopee needs TWO files per month** because the numbers live in different exports:
 the **Overview** export supplies **Visitors**, and the **Traffic** export supplies
@@ -38,7 +44,9 @@ the **Overview** export supplies **Visitors**, and the **Traffic** export suppli
 merges them. The Traffic file's month is read from its filename, so keep it named
 like `Shopee Traffic_January_2026.xlsx`.
 
-Every output ends with a bold **TOTAL** row.
+Each output shows **per-month** CVR only — no aggregate TOTAL row, because the
+visitor de-dup basis differs across platforms (Lazada/Shopify are true monthly-unique;
+TikTok/Shopee are summed-daily), so a single overall CVR would not be apples-to-apples.
 
 ### Smart file handling (automatic)
 - **Overlapping months** (e.g. May 1–15 and May 1–31): keeps the most complete one.
